@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 uptime
 ======
 
@@ -477,3 +478,7 @@ TODO
 * Account for scheduled maintenance (and provide two QoS calculations: with and without scheduled maintenance)
 * Allow for JavaScript execution in the monitored resources by using a headless browser (probably zombie.js)
 * Unit tests
+=======
+# webchecker
+A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap
+>>>>>>> 8da9fce6986459ebd29f79e42cc92ab856bc9445
