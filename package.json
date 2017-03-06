@@ -28,8 +28,8 @@
   "repository": "https://github.com/fzaninotto/uptime",
   "license": "MIT",
   "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
+    "node": "4.5.0",
+    "npm": "2.15.8"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha test/lib/",
