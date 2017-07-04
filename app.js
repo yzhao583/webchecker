@@ -5,7 +5,6 @@
 var http       = require('http');
 var url        = require('url');
 var express    = require('express');
-var config     = require('config');
 var socketIo   = require('socket.io');
 var fs         = require('fs');
 var monitor    = require('./lib/monitor');
@@ -15,6 +14,8 @@ var Ping       = require('./models/ping');
 var PollerCollection = require('./lib/pollers/pollerCollection');
 var apiApp     = require('./app/api/app');
 var dashboardApp = require('./app/dashboard/app');
+var YAML       = require('yamljs');
+var config     = YAML.load('./config/production.yaml');
 
 // database
 
@@ -30,7 +31,7 @@ var server = http.createServer(app);
 
 app.configure(function(){
   app.use(app.router);
-  // the following middlewares are only necessary for the mounted 'dashboard' app, 
+  // the following middlewares are only necessary for the mounted 'dashboard' app,
   // but express needs it on the parent app (?) and it therefore pollutes the api
   app.use(express.bodyParser());
   app.use(express.methodOverride());

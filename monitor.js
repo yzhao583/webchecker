@@ -1,6 +1,7 @@
 var fs      = require('fs');
-var config  = require('config');
 var Monitor = require('./lib/monitor');
+var YAML    = require('yamljs');
+var config  = YAML.load('./config/production.yaml');
 
 // start the monitor
 monitor = Monitor.createMonitor(config.monitor);

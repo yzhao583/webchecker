@@ -1,6 +1,8 @@
 var mongoose   = require('mongoose');
-var config     = require('config');
+// var config     = require('config');
 var semver     = require('semver');
+var YAML       = require('yamljs');
+var config     = YAML.load('./config/production.yaml');
 
 // configure mongodb
 mongoose.connect('mongodb://' + config.mongodb.user + ':' + config.mongodb.password + '@' + config.mongodb.server +'/' + config.mongodb.database);
